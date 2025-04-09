@@ -5,6 +5,7 @@ interface Props {
   block?: boolean;
   style?: "outline" | "primary" | "inverted" | "muted";
   class?: string;
+  disabled?: boolean;
   [x: string]: any;
 }
 
@@ -14,6 +15,7 @@ const {
   size = "lg",
   style = "primary",
   class: className,
+  disabled,
   ...rest
 } = Astro.props;
 

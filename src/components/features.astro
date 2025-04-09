@@ -4,51 +4,50 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Math Solutions",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Get step-by-step solutions for any math problem, from basic arithmetic to complex equations.",
+    icon: "bx:bxs-calculator",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Translate & More",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Translate text into multiple languages and access many more helpful features.",
+    icon: "bx:bxs-book-content",
   },
   {
-    title: "On-Demand Components",
+    title: "Camera Integration",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Simply take a photo of your homework problem and let Mathi analyze and help you solve it with detailed explanations.",
+    icon: "bx:bxs-camera",
   },
   {
-    title: "Broad Integration",
+    title: "Interactive Learning",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Learn through engaging interactions with AI that adapts to your learning style and pace.",
+    icon: "bx:bxs-brain",
   },
   {
-    title: "SEO Enabled",
+    title: "Multi-Language Support",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Access learning materials and solutions in multiple languages to better understand concepts in your preferred language.",
+    icon: "bx:bxs-message-rounded-dots",
   },
   {
-    title: "Community",
+    title: "Step-by-Step Guidance",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Follow clear, detailed explanations that break down complex problems into easy-to-understand steps.",
+    icon: "bx:bxs-graduation",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Your Smart Study Companion
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    From math solutions to language translation, Mathi helps you tackle any academic challenge with confidence.
   </p>
 </div>
 
@@ -56,11 +55,11 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <h3 class="font-semibold text-lg">{item.title}</h3>
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>

@@ -4,9 +4,25 @@
 
 @theme {
   --font-sans:
-    Bricolage Grotesque Variable, Inter Variable, Inter, ui-sans-serif,
+    'Nunito', ui-sans-serif,
     system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Light theme colors */
+  --color-primary: #4527A0;
+  --color-primary-container: #D1C4E9;
+  --color-secondary: #0091EA;
+  --color-secondary-container: #CFE4FF;
+  --color-tertiary: #00B0FF;
+  --color-tertiary-container: #9FCBF1;
+
+  /* Dark theme colors */
+  --color-dark-primary: #B39DDB;
+  --color-dark-primary-container: #7E57C2;
+  --color-dark-secondary: #80D8FF;
+  --color-dark-secondary-container: #00497B;
+  --color-dark-tertiary: #40C4FF;
+  --color-dark-tertiary-container: #0179B6;
 }
 
 /*
@@ -25,4 +41,77 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
+
+@layer base {
+  html {
+    font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Light theme (default) */
+  :root {
+    --background: #ffffff;
+    --text: #000000;
+  }
+
+  /* Apply theme colors */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-primary-container {
+    background-color: var(--color-primary-container);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-secondary-container {
+    background-color: var(--color-secondary-container);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #121212;
+      --text: #ffffff;
+      --color-primary: var(--color-dark-primary);
+      --color-primary-container: var(--color-dark-primary-container);
+      --color-secondary: var(--color-dark-secondary);
+      --color-secondary-container: var(--color-dark-secondary-container);
+      --color-tertiary: var(--color-dark-tertiary);
+      --color-tertiary-container: var(--color-dark-tertiary-container);
+    }
+  }
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-container);
+  color: var(--color-primary);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-container);
+  color: var(--color-secondary);
 }
