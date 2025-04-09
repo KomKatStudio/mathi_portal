@@ -1,19 +1,17 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Mathi. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://komkat.studio"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      KomKat Studio
-    </a>
-  </p>
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="my-10 mt-20">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap items-center justify-between">
+      <p class="text-sm text-slate-600">
+        © {new Date().getFullYear()} KomKat Studio. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6">
+        <a href="/privacy-policy" class="text-sm text-slate-600 hover:text-slate-900">Privacy Policy</a>
+        <a href="/terms" class="text-sm text-slate-600 hover:text-slate-900">Terms of Service</a>
+      </div>
+    </div>
+  </div>
 </footer>
