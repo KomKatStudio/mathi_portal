@@ -8,7 +8,7 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://komkatstudio.github.io/mathi_portal",
+  site: "https://trymathi.xyz",
   integrations: [mdx(), sitemap(), icon()],
 
   vite: {
